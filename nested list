@@ -1,0 +1,30 @@
+if __name__ == '__main__':
+    students=[]
+    n=int(input())
+    for i in range(n):
+        students.append([])
+        name = input()
+        score = float(input())
+        students[i].append(name)
+        students[i].append(score)
+    h=students[0][1]
+    s=h
+    i=1
+    for i in range(n):
+        if(students[i][1]<h):
+            s=h
+            h=students[i][1]
+        elif(students[i][1]<s):
+            s=students[i][1]
+        elif(s==h):
+                s=students[i][1] 
+            
+            
+            
+    list=[]              
+    for i in range(n):
+        if(students[i][1]==s):
+            list.append(students[i][0])
+    x=sorted(list)
+    for i in x:
+        print(i) 
