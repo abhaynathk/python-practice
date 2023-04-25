@@ -14,10 +14,11 @@ if __name__ == '__main__':
         if(students[i][1]<h):
             s=h
             h=students[i][1]
+        elif(s==h):    
+            continue
         elif(students[i][1]<s):
-            s=students[i][1]
-        elif(s==h):
-                s=students[i][1] 
+            s=students[i][1]       
+            
             
             
             
@@ -27,4 +28,4 @@ if __name__ == '__main__':
             list.append(students[i][0])
     x=sorted(list)
     for i in x:
-        print(i) 
+        print(i)       
